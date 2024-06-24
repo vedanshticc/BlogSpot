@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <style>
+            .welcome{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+}
+.welcome h1{
+    font-size: 4rem;
+    color:moccasin;
+}
+.welcome p {
+    font-size: 1.8rem;
+    padding: 0;
+    color: wheat;
+    margin: 0;
+}
+        </style>
+        <%- include('./partials/nav&bubbles.ejs') %>
+        <%- include('./partials/js&footer.ejs') %>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+          </style>
+            <section class="welcome">
+                <h1>Welcome to BlogSpot</h1>
+                <p>Where imagination thrives and stories unfold. Join our vibrant community of wordsmiths,</p> <p> and unleash your creativity by sharing your own captivating blogs alongside a tapestry of diverse voices.</p>
+            </section>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <style>
+            form{
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+}
+#form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+#form label{
+    display: block;
+    margin-bottom: 10px;
+}
+#form input, #form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#form button{
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.1);
+    border-width: 0;
+    color: wheat;
+    font-weight: bold;
+}
+#form button:hover{
+    background: rgba(255,255,255,0.25);
+    cursor: pointer;
+}
+#form button:active{
+    background: rgba(255,255,255,0.5);
+}
+        </style>
+        <%- include('./partials/nav&bubbles.ejs') %>
+        <div class="lol"> 
+            <form action='/view' method="post" id="form"><!--sends a post request to '/view'-->
+                <label for="title">Blog title:</label>
+                <input type="text" name="title" required><!--name attribute so that we can access these values on server through name property-->
+                <label for="subtitle">Blog subtitle:</label>
+                <input type="text" name="subtitle" required>
+                <label for="body">Blog body:</label>
+                <textarea name="body" id="body" rows="10" required></textarea>
+                <label for="author">Author's name:</label>
+                <input type="text" name="author" required>
+                <button>Submit</button>
+            </form>
+        </div>
+        <%- include('./partials/js&footer.ejs') %>
+    </body>
+</html>

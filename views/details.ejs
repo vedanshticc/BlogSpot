@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <style>
+            a.delete {
+                position: relative;
+            }
+            .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: wheat;
+            }
+
+        </style>
+        <%- include('./partials/nav&bubbles.ejs') %>
+        <%- include('./partials/js&footer.ejs') %>
+        <div class="content">
+            <h1><%= blog.title %></h1>
+            <h3><%= blog.subtitle %></h3>
+            <h5><%= blog.body %></h5>
+            <p>------<%= blog.author %>------</p>
+            <a class="delete" data-doc="<%= blog._id %>">Delete</a>
+        </div>
+        <script>//front end js here
+            const trash=document.querySelector('a.delete')
+            trash.addEventListener('click',(e)=>{
+                const endpoint=`/blogs/${trash.dataset.doc}`
+                fetch(endpoint,{
+                    method:'DELETE'
+                })
+                .then((response)=>{
+                    response.json()
+                })
+                    .then(data=>window.location.href=data.redirect)
+                .catch(err=>{
+                    console.log(err)
+                })
+            })
+        </script>
+    </body>
+</html>

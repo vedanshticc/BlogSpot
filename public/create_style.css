@@ -1,0 +1,36 @@
+form{
+    position: relative;
+    z-index: 1;
+    font-size: 1.1rem;
+    color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+}
+#form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+#form label{
+    display: block;
+    margin-bottom: 10px;
+}
+#form input, #form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#form button{
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.1);
+    border-width: 0;
+    color: wheat;
+    font-weight: bold;
+}
+#form button:hover{
+    background: rgba(255,255,255,0.25);
+}
+#form button:active{
+    background: rgba(255,255,255,0.5);
+}

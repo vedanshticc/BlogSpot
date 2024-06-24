@@ -1,0 +1,23 @@
+.info{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+    width: 70%;
+    margin: auto;
+    font-family:'Times New Roman', Times, serif;
+}
+.info h1{
+    font-size: 2rem;
+    color:moccasin;
+}
+.info p { 
+    font-size: 1.2rem;
+    color: wheat;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+}

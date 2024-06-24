@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        <style>
+            .info{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Dancing Script', cursive;
+    z-index: 1;
+    width: 70%;
+    margin: auto;
+    font-family:'Times New Roman', Times, serif;
+}
+.info h1{
+    font-size: 2rem;
+    color:moccasin;
+}
+.info p { 
+    font-size: 1.2rem;
+    color: wheat;
+    padding-bottom: 0;
+    margin-bottom: 2px;
+}
+        </style>
+        <%- include('./partials/nav&bubbles.ejs') %>
+        <%- include('./partials/js&footer.ejs') %>
+            <section class="info">
+                <h1>About BlogSpot</h1>
+                <p>BlogSpot is a platform designed to empower you to express your thoughts, ideas, and stories through blogging. Whether you're a seasoned writer or just starting out, BlogSpot provides you with the tools and flexibility to create and share your content with the world.
+                </p>
+                <p>Created by Tejas Kadre, BlogSpot was launched in 2023 with the vision of providing a user-friendly and intuitive platform for bloggers of all backgrounds. We believe that everyone has a unique voice and a story to tell, and BlogSpot is here to support you on your blogging journey.
+                </p>
+                <p>Our mission is to foster a vibrant and inclusive community where individuals can connect, inspire, and learn from one another. We are continuously working to enhance your blogging experience and offer new features to help you engage with your readers and showcase your creativity.
+                </p>
+                <p>Thank you for being a part of the BlogSpot community. We hope you enjoy your blogging experience and create meaningful connections along the way. Happy blogging!
+                </p>
+            </section>
+    </body>
+</html>

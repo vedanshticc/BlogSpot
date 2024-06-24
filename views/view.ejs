@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+        
+        <%- include('./partials/nav&bubbles.ejs') %>
+        <div class="all">
+            <% if(blogs.length>0){  %>
+                <% blogs.forEach(blog =>{ %>
+                    <a class="single" href="/view/<%= blog._id %>"> 
+                        <h3><%= blog.title %></h3>
+                        <p><%= blog.subtitle %></p>
+                    </a>
+                <% }) %>
+            <% } else { %>
+                <p>No Blogs</p>
+            <% } %>
+        </div>
+    <%- include('./partials/js&footer.ejs') %>
+    <style>
+        .all a{
+            left: 20%;
+            position: absolute;
+            
+        }
+    </style>
+    </body>
+</html>
